@@ -5,9 +5,6 @@ const fs = require("fs")
 const bodyParser = require("body-parser")
 const path = require("path")
 
-// json data
-const data = require("./data.json")
-
 
 // middlewares
 app.use(express.static('public'))
@@ -26,6 +23,8 @@ app.use('/Puppies', puppiesRoutes);
 app.use('/Contact', contactRoutes);
 app.use('/data.json', dataRoutes)
 
+// set spaces for json file
+app.set('json spaces', 5);
 
 app.listen(PORT)
 console.log(`Server is running on port ${PORT}`)

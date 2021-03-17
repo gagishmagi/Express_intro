@@ -16,7 +16,6 @@ router.get("/", function (req, res) {
     // res.send(data)
 
     // method 3 - Express way
-    app.set('json spaces', 5);
     res.json(data)
 })
 

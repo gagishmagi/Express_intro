@@ -1,5 +1,10 @@
 const express = require('express')
 const router = express.Router()
+const fs = require("fs")
+
+// json data
+const data = require("../data.json")
+
 
 router.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'public', 'index.html'))
